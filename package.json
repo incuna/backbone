@@ -1,6 +1,6 @@
 {
-  "name"          : "backbone",
-  "description"   : "Give your JS App some Backbone with Models, Views, Collections, and Events.",
+  "name"          : "backbone-zepto",
+  "description"   : "Give your JS App some Backbone with Models, Views, Collections, and Events. Packaged for jamjs with zepto dependency",
   "url"           : "http://backbonejs.org",
   "keywords"      : ["util", "functional", "server", "client", "browser"],
   "author"        : "Jeremy Ashkenas <jeremy@documentcloud.org>",
@@ -10,5 +10,16 @@
   },
   "lib"           : ".",
   "main"          : "backbone.js",
-  "version"       : "0.9.2"
+  "version"       : "0.9.2",
+  "jam": {
+    "main": "backbone.js",
+    "include": ["backbone.js"],
+    "dependencies": {
+      "lodash": "*"
+    },
+    "shim": {
+      "deps": ["zepto", "lodash"],
+      "exports": "Backbone"
+    }
+  }
 }
